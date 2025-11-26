@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background text-text font-inter;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.input {
+  @apply w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 6s ease-in-out infinite;
+}
