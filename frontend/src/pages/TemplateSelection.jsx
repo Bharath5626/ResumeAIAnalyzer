@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { useResume } from "../hooks/useResume";
 
 function ReactPreview({ accent = "blue" }) {
-  // small rendered visual preview (not full resume)
   const accentClasses = {
     blue: "border-blue-600 text-blue-600",
     grey: "border-gray-400 text-gray-700",
@@ -13,6 +12,7 @@ function ReactPreview({ accent = "blue" }) {
     dark: "border-gray-800 text-gray-800"
   };
   const ac = accentClasses[accent] || accentClasses.blue;
+
   return (
     <div
       className={`p-3 border rounded-md w-full h-48 flex flex-col justify-between ${ac} bg-white`}
@@ -44,23 +44,19 @@ export default function TemplateSelection() {
   const handleSelect = (id) => {
     setSelected(id);
     setTemplate(id);
-  };
-
-  const handleStart = () => {
-    if (!selected) {
-      alert("Please select a template to continue.");
-      return;
-    }
-    navigate("/builder/contact");
+    navigate("/builder/contact"); // 👈 navigate immediately on template click
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-6xl mx-auto px-6 py-12">
-        <h1 className="text-3xl font-bold mb-4">Choose a Resume Template</h1>
-        <p className="text-gray-600 mb-8">
-          Pick a style to get started — you can change it later.
+       <div className="text-center">
+  <h1 className="text-3xl font-bold mb-4">Choose a Resume Template</h1>
+   <p className="text-gray-600 mb-8" >
+          Click a template to start building your resume.
         </p>
+</div>
+       
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {templates.map((t) => (
@@ -92,21 +88,6 @@ export default function TemplateSelection() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="fixed bottom-0 left-0 w-full bg-white border-t py-4 flex justify-center shadow-lg">
-          <button
-            onClick={handleStart}
-            disabled={!selected}
-            className={`px-8 py-3 rounded-xl font-semibold transition
-              ${
-                selected
-                  ? "bg-blue-600 text-white hover:bg-blue-700"
-                  : "bg-gray-300 text-gray-500 cursor-not-allowed"
-              }`}
-          >
-            Start Building
-          </button>
         </div>
       </div>
     </div>
