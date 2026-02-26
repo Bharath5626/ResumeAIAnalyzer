@@ -418,11 +418,7 @@ Contributions are welcome! Please follow these guidelines:
 
 ---
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 ## 👨‍💻 Author
 
@@ -430,9 +426,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Final Year Computer Science Student  
 Specialization: Artificial Intelligence & Machine Learning
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
+- GitHub: [Bharath5626](https://github.com/Bharath5626)
+- LinkedIn: [Bharath5626](https://linkedin.com/in/Bharath5626)
+- Email: Bharathsiva453@gmail.com
 
 ### Academic Context
 This project was developed as a final year capstone project, exploring the intersection of NLP, machine learning, and web development in solving real-world recruitment challenges.
@@ -451,9 +447,9 @@ This project was developed as a final year capstone project, exploring the inter
 ## 📧 Support
 
 For questions, issues, or feature requests:
-- **Email**: your.email@example.com
-- **Issues**: [GitHub Issues](https://github.com/yourusername/ResumeAIAnalyzer/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/ResumeAIAnalyzer/discussions)
+- **Email**: Bharathsiva453@gmail.com
+- **Issues**: [GitHub Issues](https://github.com/Bharath5626/ResumeAIAnalyzer/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/Bharath5626/ResumeAIAnalyzer/discussions)
 
 ---
 
