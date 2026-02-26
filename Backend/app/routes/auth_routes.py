@@ -16,10 +16,11 @@ def get_db():
 @router.post("/signup")
 def signup(user_data: UserCreate, db: Session = Depends(get_db)):
     try:
+        print(f"[SIGNUP] Received data: full_name={user_data.full_name}, email={user_data.email}")
         user = create_user(db, user_data)
         return {"message": "User created", "user": user.email}
     except Exception as e:
-        print(f"Signup error: {e}")  # ← logs to terminal
+        print(f"[SIGNUP ERROR] {type(e).__name__}: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 

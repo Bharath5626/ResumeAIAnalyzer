@@ -27,6 +27,19 @@ function Login() {
         return;
       }
 
+      // Password length validation
+      if (form.password.length < 6) {
+        alert("Password must be at least 6 characters long!");
+        return;
+      }
+
+      // Validate email format
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(form.email)) {
+        alert("Please enter a valid email address!");
+        return;
+      }
+
       const username = form.email.split("@")[0];
 
       const _res = await api.post("/auth/signup", {
@@ -62,11 +75,22 @@ function Login() {
       navigate(redirect);
     }
   } catch (err) {
-  const message =
-    err.response?.data?.detail ||
-    err.response?.data?.message ||
-    err.message ||
-    "Unexpected error";
+  console.error("Auth error:", err.response?.data);
+  
+  let message = "Unexpected error";
+  
+  if (err.response?.data?.detail) {
+    // Handle FastAPI validation errors
+    if (Array.isArray(err.response.data.detail)) {
+      message = err.response.data.detail.map(e => `${e.loc.join('.')}: ${e.msg}`).join('\n');
+    } else {
+      message = err.response.data.detail;
+    }
+  } else if (err.response?.data?.message) {
+    message = err.response.data.message;
+  } else if (err.message) {
+    message = err.message;
+  }
 
   alert("Auth failed: " + message);
 }
