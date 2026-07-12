@@ -156,7 +156,7 @@ An automated system that combines NLP, rule-based algorithms, and generative AI 
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/yourusername/ResumeAIAnalyzer.git
+git clone https://github.com/Bharath5626/ResumeAIAnalyzer.git
 cd ResumeAIAnalyzer
 ```
 
