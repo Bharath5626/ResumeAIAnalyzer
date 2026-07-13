@@ -1,43 +1,36 @@
-# -------------------------
-# Node.js
-# -------------------------
+Backend/.env
+# Node
 node_modules/
 build/
 
-# -------------------------
 # Python
-# -------------------------
 venv/
 .venv/
-env/
-myenv/
-backend/myenv/
-
 __pycache__/
-*.py[cod]
+*.pyc
+
+# Environment
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+backend/myenv/
+myenv/
+
+.vscode/
+
+*.so
+venv/
+.venv/
+__pycache__/
+*.pyc
 *.pyd
 *.so
 *.egg-info/
 
-# -------------------------
-# Environment Variables
-# -------------------------
-.env
-backend/.env
 
-# -------------------------
-# IDE
-# -------------------------
-.vscode/
-.idea/
-
-# -------------------------
-# OS Files
-# -------------------------
-.DS_Store
-Thumbs.db
-
-# -------------------------
-# Logs
-# -------------------------
-*.log
+backend/myenv/
+myenv/
+venv/
+.venv/
