@@ -30,10 +30,12 @@ __pycache__/
 *.egg-info/
 
 
-backend/myenv/
+
 myenv/
 venv/
 .venv/
 
 .env
 backend/.env
+
+backend/resume.db
