@@ -19,3 +19,11 @@ backend/myenv/
 myenv/
 
 .vscode/
+
+*.so
+*.pyd
+*.c
+*.cpp
+venv/
+__pycache__/
+*.egg-info/
