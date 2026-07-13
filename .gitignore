@@ -34,3 +34,6 @@ backend/myenv/
 myenv/
 venv/
 .venv/
+
+.env
+backend/.env
