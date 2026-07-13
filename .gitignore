@@ -35,7 +35,6 @@ myenv/
 venv/
 .venv/
 
-.env
 backend/.env
 
 backend/resume.db
